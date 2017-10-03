@@ -1,0 +1,25 @@
+@charset "UTF-8";
+.stars-outer {
+	font-family: FontAwesome;
+	font-size: 30px;
+	line-height: 30px;
+	position: relative;
+	color: black;
+	float: left;
+}
+
+.stars-outer:before {
+	content: "";
+}
+
+.stars-inner {
+	color: yellow;
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+
+.stars-inner:before {
+	content: "";
+}

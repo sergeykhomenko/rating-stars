@@ -1,0 +1,36 @@
+// Settings
+$star-outer-color: black
+$star-inner-color: yellow
+$stars-count: 5;
+
+// Technicals
+=stars-content($code, $count)
+    $_tmp: $code
+    @for $i from 2 through $count
+        $_tmp: $_tmp + $code
+    
+    content: $_tmp
+        
+// Styles
+.stars
+
+    &-outer
+        font-family: FontAwesome
+        font-size: 30px
+        line-height: 30px
+        position: relative
+        color: $star-outer-color
+        float: left
+
+        &:before
+            +stars-content('\f005', $stars-count)
+
+    &-inner
+        color: $star-inner-color
+        position: absolute
+        left: 0
+        top: 0
+        overflow: hidden
+
+        &:before
+            +stars-content('\f005', $stars-count)
